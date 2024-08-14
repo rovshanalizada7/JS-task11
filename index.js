@@ -228,10 +228,10 @@ const newArray = [
 ]
 
 
-import checkName from './main.js'
-import checkID from './main.js'
+import {checkName,checkID} from './main.js'
 
-// checkName (newArray,"Ervin Howell")
+
+checkName (newArray,"Ervin Howell")
 
 
 
@@ -240,6 +240,8 @@ checkID(newArray,5)
 let obj = JSON.stringify(checkID(newArray,5))
 
 console.log(obj);
+console.log(JSON.parse(obj));
+
 
 
 

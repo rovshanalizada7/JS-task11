@@ -7,20 +7,18 @@
 
 
 
-// const checkName = (array, name) => {
-//     try {
-//       const item = array.find(item => item.name === name);
-//       if (item) {
-//         if (!item.address.street  || !item.address.city) throw new Error(`${item.name}: City or street does not match`)
-//         else  console.log(`Street: ${item.address.street}, City: ${item.address.city}`);
-//       } 
-//     } catch (error) {
-//       console.log(error.message);
-//     }
-//   };
+const checkName = (array, name) => {
+    try {
+      const item = array.find(item => item.name === name);
+      if (item) {
+        if (!item.address.street  || !item.address.city) throw new Error(`${item.name}: City or street does not match`)
+        else  console.log(`Street: ${item.address.street}, City: ${item.address.city}`);
+      } 
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
 
-
-// export default checkName
 
 
 //-------------------------------------------------------------------------
@@ -40,7 +38,7 @@ const checkID = (array, id) => {
     try {
       const item = array.find(item => item.id === id);
       if (item) {
-        console.log(item);
+        return item;
       } else {
         throw new Error (`ID ${id} not found`);
       }
@@ -49,5 +47,5 @@ const checkID = (array, id) => {
     }
   };
   
-export default checkID;
+export {checkID,checkName};
 
